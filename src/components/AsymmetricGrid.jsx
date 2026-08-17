@@ -1,11 +1,13 @@
 import React from 'react';
 import { Truck } from 'lucide-react';
+import assBg1 from '../assets/ass-bg-1.png';
+import assBg2 from '../assets/ass-bg-2.png';
+import assBg5 from '../assets/ass-bg-5.png';
+import ass5 from '../assets/ass-5.png';
 import promoBg1 from '../assets/promo-bg-1.png';
 import promoBg2 from '../assets/promo-bg-2.png';
-import promoBg3 from '../assets/promo-bg-3.png';
 import promo1 from '../assets/promo-1.png';
 import promo2 from '../assets/promo-2.png';
-import promo3 from '../assets/promo-3.png';
 import promoDis1 from '../assets/promo-dis-1.png';
 import promoDis3 from '../assets/promo-dis-3.png';
 
@@ -24,7 +26,7 @@ export default function AsymmetricGrid() {
             {/* Background Texture & Dark Overlay */}
             <div className="absolute inset-0 z-0">
               <img
-                src={promoBg1}
+                src={assBg1}
                 alt="Dark Stone Background"
                 className="w-full h-full object-cover filter brightness-75"
               />
@@ -66,10 +68,20 @@ export default function AsymmetricGrid() {
           {/* Column 2 & 3 Grid Wrapper (7 Cols, Zero Gap) */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-0 w-full">
             
-            {/* Card 2: Middle Top (Burger Combo - Dark Red) */}
+            {/* Card 2: Middle Top (Burger Combo - Red Ember Background) */}
             <div 
-              className="relative rounded-none overflow-hidden min-h-[220px] sm:min-h-[290px] p-5 sm:p-8 flex flex-col justify-between bg-gradient-to-br from-red-800 via-red-900 to-stone-950 group cursor-pointer w-full"
+              className="relative rounded-none overflow-hidden min-h-[220px] sm:min-h-[290px] p-5 sm:p-8 flex flex-col justify-between bg-stone-950 group cursor-pointer w-full"
             >
+              {/* Background Red Ember Image */}
+              <div className="absolute inset-0 z-0">
+                <img
+                  src={assBg2}
+                  alt="Red Ember Background"
+                  className="w-full h-full object-cover filter brightness-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-red-950/80 via-red-900/40 to-transparent" />
+              </div>
+
               <div className="relative z-10 space-y-1">
                 <span className="text-[#FFC72C] font-sans text-xs font-bold block uppercase tracking-wider">
                   Delicious
@@ -94,16 +106,16 @@ export default function AsymmetricGrid() {
               </div>
             </div>
 
-            {/* Card 3: Right Top (Super Delicious - Dark Brick Wall) */}
+            {/* Card 3: Right Top (Super Delicious) */}
             <div 
               className="relative rounded-none overflow-hidden min-h-[220px] sm:min-h-[290px] p-5 sm:p-8 flex flex-col justify-between bg-stone-900 group cursor-pointer w-full"
             >
-              {/* Brick Background */}
-              <div className="absolute inset-0 z-0 opacity-40">
+              {/* Background Promo 1 Texture */}
+              <div className="absolute inset-0 z-0">
                 <img
-                  src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800"
-                  alt="Brick Wall Texture"
-                  className="w-full h-full object-cover filter brightness-50"
+                  src={promoBg1}
+                  alt="Super Delicious Background"
+                  className="w-full h-full object-cover filter brightness-75"
                 />
               </div>
 
@@ -177,10 +189,10 @@ export default function AsymmetricGrid() {
             <div 
               className="relative rounded-none overflow-hidden min-h-[270px] sm:min-h-[290px] p-6 sm:p-8 flex flex-col justify-between bg-stone-950 group cursor-pointer w-full"
             >
-              {/* Background Wood Texture */}
+              {/* Background Wood Texture (ass-bg-5) */}
               <div className="absolute inset-0 z-0">
                 <img
-                  src={promoBg3}
+                  src={assBg5}
                   alt="Dark Wood Texture"
                   className="w-full h-full object-cover filter brightness-75"
                 />
@@ -199,10 +211,10 @@ export default function AsymmetricGrid() {
                 </span>
               </div>
 
-              {/* Chicken Platter Image */}
+              {/* Chicken Platter Image (ass-5) */}
               <div className="relative z-10 pt-4 flex justify-end">
                 <img
-                  src={promo3}
+                  src={ass5}
                   alt="Fried Chicken Platter"
                   className="w-44 sm:w-52 h-32 sm:h-36 object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
                 />
